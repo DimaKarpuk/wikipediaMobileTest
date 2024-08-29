@@ -1,5 +1,5 @@
 # Проект по автоматизации mobile тестов для приложения [Wikipedia](https://ru.wikipedia.org/)
-<p align="center"><a href="https://ru.wikipedia.org/"><img src="media/logo/wikipedia.png" align="center" width="500" height="300" alt="Wiki"/></a></p>  
+<p align="center"><a href="https://ru.wikipedia.org/"><img src="media/logo/wikipedia.png" align="center" width="300" height="300" alt="Wiki"/></a></p>  
 
 > Википедия - общедоступная многоязычная универсальная интернет-энциклопедия со свободным контентом, реализованная на принципах вики.
 
@@ -13,18 +13,14 @@
 - <a href="#allure">Интеграция с Allure TestOps</a>
 - <a href="#teleg"> Уведомление в Telegram о результатах выполнения автоматизированных тестов</a>
 - <a href="#movie">Видеопример прохождения тестов Browserstack</a>
+---
 
-Тесты написаны на языке <code>Java</code> с использованием фреймворка для автоматизации тестирования <code>[Selenide](https://selenide.org/)</code>, сборщик - <code>Gradle</code>.
-
-<code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
-
-Для локального тестирования приложения на мобильных устройствах используется <code>Android Studio</code> и <code>Appium</code>.
-Для удаленного тестирования в различных платформах <code>Browserstack</code>
-
-Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета
-и отправкой результатов в <code>Telegram</code> при помощи бота.
-
-
+- Тесты в данном проекте написаны на языке <code>Java</code> с использованием фреймворка для тестирования [Selenide](https://selenide.org/), c применением паттерна Page Object.
+- Сборщик - <code>Gradle</code>.
+- <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
+- При прогоне тестов для запуска используется [Android Studio](https://developer.android.com/), [Browserstack](https://www.browserstack.com/), драйвер Appium.
+- В отчетах Allure для каждого теста (запускаемого удаленно) прикреплено видео прохождения теста.
+---
 
 <a id="tools"></a>
 
@@ -45,31 +41,16 @@
 
 ## :clipboard: Тестовые сценарии
 
-### Для локального запуска
-- :white_check_mark: Проверка стартовых страниц при запуске приложения
-- :white_check_mark: Проверка функции поиска в Википедии
-- :white_check_mark: Проверка авторизации пользователя при неправильном вводе данных
-
-### Для удаленного запуска
-- :white_check_mark: Проверка выпадающей ошибки поиска при вводе отсутствующего значения
-- :white_check_mark: Проверка отображения информационного баннера с новостями
-- :white_check_mark: Проверка добавления языка текста в настройках
-
----
-
-- Тесты в данном проекте написаны на языке <code>Java</code> с использованием фреймворка для тестирования [Selenide](https://selenide.org/), c применением паттерна Page Object.
-- Сборщик - <code>Gradle</code>.
-- <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
-- При прогоне тестов для запуска используется [Android Studio](https://developer.android.com/), [Browserstack](https://www.browserstack.com/), драйвер Appium.
-- В отчетах Allure для каждого теста (запускаемого удаленно) прикреплено видео прохождения теста.
-
+- :white_check_mark: Тест стартовых страниц при запуске приложения
+- :white_check_mark: Тест главного меню приложения
+- :white_check_mark: Тест на регистрацию
 ---
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/021-Melnikov-Wikipedia_mobile_autotests/)
+## <img src="media/logo/jenkins-original.svg" width="25" height="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/MobileTest_KarpukD27/)
 
 <p align="center">
-<img src="media/screen/jenkins_main.png" alt="Jenkins Page" width="1000" height="350">
+<img src="media/screen/jenkins.png" alt="Jenkins Page" width="1000" height="350">
 </p>
 
 ---
@@ -80,42 +61,43 @@
 ### Локальный запуск (через эмулятор)
 
 ```bash
-gradle clean local_test -Dhost=local
+gradle clean test -DdeviceHost=emulation
+```
+
+### Локальный запуск (через реальный девайс)
+
+```bash
+gradle clean test -DdeviceHost=real
 ```
 
 > Для запуска локальных тестов требуются следующие установленные программы на компьютере: Appium Server, Appium и Android Studio
-<p align="center">  
-<img title="AppiumService" src="media/screen/appium_server.png" width="850">  
-</p> 
-Пример запуска Appium сервера, с созданием локального порта.
 
 ### Удаленный запуск (через browserstack)
 
 ```bash
-gradle clean browserstack_test -Dhost=browserstack
+gradle clean test -DdeviceHost=browserstack
 ```
-
 ---
 
 <a id="allureReport"></a>
-## <img alt="Allure" height="25" src="media/logo/Allure.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/021-Melnikov-Wikipedia_mobile_autotests/allure/">Allure Report</a>
+## <img alt="Allure" height="25" src="media/logo/Allure_Report.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://jenkins.autotests.cloud/job/MobileTest_KarpukD27/15/allure/">Allure Report</a>
 
 ## 🖨️ Основная страница отчёта
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/screen/allure_main.png" width="850">  
+<img title="Allure Overview Dashboard" src="media/screen/allureReport.png" width="850">  
 </p>  
 
 ## 📄 Тест-кейсы
 
 <p align="center">  
-<img title="Allure Tests" src="media/screen/allure_suits.png" width="850">   
+<img title="Allure Tests" src="media/screen/allureReport1.png" width="850">   
 </p>
 
 ---
 
 <a id="allure"></a>
-## <img alt="Allure_TO" height="25" src="media/logo/Allure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3844/dashboards">Allure TestOps</a>
+## <img alt="Allure_TO" height="25" src="media/logo/allureT.png" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3844/dashboards">Allure TestOps</a>
 
 ## 🖨️ Основная страница отчёта
 

@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
     private static final String defaultDeviceHost = "browserstack";
+    public static String deviceHost = System.getProperty("deviceHost");
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = null;
@@ -39,13 +40,17 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        Attach.pageSource();
-        String deviceHost = System.getProperty("deviceHost");
-        if (deviceHost ==defaultDeviceHost) {
+        if (deviceHost.equals("remote")) {
+            Attach.pageSource();
+
             String sessionId = Selenide.sessionId().toString();
             closeWebDriver();
+
             Attach.addVideo(sessionId);
         }else {
+            Attach.screenshotAs("Last screenshot");
+            Attach.pageSource();
+
             closeWebDriver();
         }
     }
