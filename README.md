@@ -97,39 +97,21 @@ gradle clean test -DdeviceHost=browserstack
 ---
 
 <a id="allure"></a>
-## <img alt="Allure_TO" height="25" src="media/logo/allureT.png" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3844/dashboards">Allure TestOps</a>
+## <img alt="Allure_TO" height="25" src="media/logo/allureTe.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/4412/dashboards">Allure TestOps</a>
 
 ## 🖨️ Основная страница отчёта
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="media/screen/allure_to_boards.png" width="850">  
+<img title="Allure TestOps Dashboard" src="media/screen/allureTest.png" width="850">  
 </p>  
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов: сколько из них добавлены и проходятся вручную, сколько автоматизированы. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 
 
-## 📄 Авто и Ручные тест-кейсы
+## 📄 Авто тест-кейсы
 
 <p align="center">  
-<img title="Allure Tests" src="media/screen/allure_to_manual.png" width="850">  
+<img title="Allure Tests" src="media/screen/allureTest1.png" width="850">  
 </p>
-
----
-
-<a id="jira"></a>
-
-## <img src="media/logo/Jira.svg" width="25" height="25"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-978)
-
-Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
-### Задача в Jira
-
-<p align="center">
-<img src="media/screen/Jira_main.png" alt="TestOps launch" width="800" height="350">
-</p>
-
-#### Содержание задачи
-
-- :heavy_check_mark: Тест-кейсы из Allure TestOps
-- :heavy_check_mark: Результат прогона тестов в Allure TestOps
 
 ---
 
@@ -139,7 +121,7 @@ gradle clean test -DdeviceHost=browserstack
 ### Уведомление через чат бот
 
 <p align="center">
-<img src="media/screen/tlg_bot.png" alt="Telegram" width="500" height="400">
+<img src="media/logo/Telegram_2019_Logo.svg" alt="Telegram" width="500" height="400">
 </p>
 
 
