@@ -120,7 +120,7 @@ gradle clean test -DdeviceHost=browserstack
 ### Уведомление через чат бот
 
 <p align="center">
-<img src="media/screen/telegram.jpg" alt="Telegram" width="500" height="400">
+<img src="media/screen/telegram.jpg" alt="Telegram" width="430" height="400">
 </p>
 
 
