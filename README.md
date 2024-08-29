@@ -12,7 +12,6 @@
 - <a href="#allureReport">Allure-отчет</a>
 - <a href="#allure">Интеграция с Allure TestOps</a>
 - <a href="#teleg"> Уведомление в Telegram о результатах выполнения автоматизированных тестов</a>
-- <a href="#movie">Видеопример прохождения тестов Browserstack</a>
 ---
 
 - Тесты в данном проекте написаны на языке <code>Java</code> с использованием фреймворка для тестирования [Selenide](https://selenide.org/), c применением паттерна Page Object.
@@ -29,16 +28,18 @@
 <p align="left">
 <a href="https://allurereport.org/"><img align="center" src="media/logo/Allure_Report.svg" height="40" width="40"></a>
 <a href="https://gradle.org/"><img align="center" src="media/logo/gradle-original.svg" height="40" width="40"></a>
-<a href="https://www.jetbrains.com/idea/"><img align="center" src="media/logo/intellij-original.svg" height="40" width="40"></a>
+<a href="https://developer.android.com/"><img align="center" src="media/logo/androidStudio.svg" height="40" width="40"></a>
 <a href="https://www.java.com/"><img align="center" src="media/logo/java-original-wordmark.svg" height="40" width="40"></a>
 <a href="https://www.jenkins.io/"><img align="center" src="media/logo/jenkins-original.svg" height="40" width="40"></a>
 <a href="https://junit.org/junit5/"><img align="center" src="media/logo/junit-original.svg" height="40" width="40"></a>
 <a href="https://selenide.org/"><img align="center" src="media/logo/Selenide.svg" height="40" width="40"></a>
-<a href="https://aerokube.com/selenoid/"><img align="center" src="media/logo/Selenoid.svg" height="40" width="40"></a>
+<a href="https://www.browserstack.com/"><img align="center" src="media/logo/browserstack.svg" height="40" width="40"></a>
+<a href="https://appium.io/"><img align="center" src="media/logo/appium.svg" height="40" width="40"></a>
+<a href="https://qameta.io/"><img align="center" src="media/logo/allureTe.svg" height="40" width="40"></a>
 </p>
 
 ---
-
+<a id="checking"></a>
 ## :clipboard: Тестовые сценарии
 
 - :white_check_mark: Тест стартовых страниц при запуске приложения
@@ -104,8 +105,6 @@ gradle clean test -DdeviceHost=browserstack
 <p align="center">  
 <img title="Allure TestOps Dashboard" src="media/screen/allureTest.png" width="850">  
 </p>  
-На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов: сколько из них добавлены и проходятся вручную, сколько автоматизированы. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
-
 
 ## 📄 Авто тест-кейсы
 
@@ -116,12 +115,12 @@ gradle clean test -DdeviceHost=browserstack
 ---
 
 <a id="teleg"></a>
-## <img src="media/logo/Telegram.svg" width="25" height="25"/> Уведомления в Telegram чат с ботом
+## <img src="media/logo/Telegram_2019_Logo.svg" width="25" height="25"/> Уведомления в Telegram чат с ботом
 
 ### Уведомление через чат бот
 
 <p align="center">
-<img src="media/logo/Telegram_2019_Logo.svg" alt="Telegram" width="500" height="400">
+<img src="media/screen/telegram.jpg" alt="Telegram" width="500" height="400">
 </p>
 
 
@@ -135,11 +134,3 @@ gradle clean test -DdeviceHost=browserstack
 - :heavy_check_mark: Ссылка на Allure отчет
 
 ---
-
-<a id="movie"></a>
-## <img alt="Browserstack" height="25" src="media/logo/Browserstack.svg" width="25"/></a> Видеопример выполнения теста c Browserstack
-
-
-<p align="center">
-<img title="Browserstack Video" src="media/screen/brows.gif" width="350" height="350"  alt="video">   
-</p>
