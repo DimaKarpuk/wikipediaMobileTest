@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
     private static final String defaultDeviceHost = "browserstack";
+
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = null;
@@ -41,11 +42,11 @@ public class TestBase {
     void addAttachments() {
         Attach.pageSource();
         String deviceHost = System.getProperty("deviceHost");
-        if (deviceHost ==defaultDeviceHost) {
+        if (deviceHost == "browserstack") {
             String sessionId = Selenide.sessionId().toString();
             closeWebDriver();
             Attach.addVideo(sessionId);
-        }else {
+        } else {
             closeWebDriver();
         }
     }

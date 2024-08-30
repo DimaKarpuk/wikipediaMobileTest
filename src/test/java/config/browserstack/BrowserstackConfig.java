@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 public interface BrowserstackConfig extends Config {
 
     @Key("device")
-    @DefaultValue("Google Pixel 3")
+    @DefaultValue("Google Pixel 3a")
     String device();
 
     @Key("version")
@@ -13,6 +13,6 @@ public interface BrowserstackConfig extends Config {
     String version();
 
     @Key("browserstackApp")
-    @DefaultValue("bs://a826e5e072abe58e3045a2c8709d772e14442e60")
+    @DefaultValue("bs://a07a168a96deb78c2ec368985efec5ff4061e279")
     String app();
 }

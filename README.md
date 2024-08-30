@@ -12,6 +12,7 @@
 - <a href="#allureReport">Allure-отчет</a>
 - <a href="#allure">Интеграция с Allure TestOps</a>
 - <a href="#teleg"> Уведомление в Telegram о результатах выполнения автоматизированных тестов</a>
+- <a href="#gif"> Пример видео запуска теста</a>
 ---
 
 - Тесты в данном проекте написаны на языке <code>Java</code> с использованием фреймворка для тестирования [Selenide](https://selenide.org/), c применением паттерна Page Object.
@@ -25,17 +26,20 @@
 
 ## 🔨 Технологии и инструменты:
 
-<p align="left">
-<a href="https://allurereport.org/"><img align="center" src="media/logo/Allure_Report.svg" height="40" width="40"></a>
-<a href="https://gradle.org/"><img align="center" src="media/logo/gradle-original.svg" height="40" width="40"></a>
-<a href="https://developer.android.com/"><img align="center" src="media/logo/androidStudio.svg" height="40" width="40"></a>
-<a href="https://www.java.com/"><img align="center" src="media/logo/java-original-wordmark.svg" height="40" width="40"></a>
-<a href="https://www.jenkins.io/"><img align="center" src="media/logo/jenkins-original.svg" height="40" width="40"></a>
-<a href="https://junit.org/junit5/"><img align="center" src="media/logo/junit-original.svg" height="40" width="40"></a>
-<a href="https://selenide.org/"><img align="center" src="media/logo/Selenide.svg" height="40" width="40"></a>
-<a href="https://www.browserstack.com/"><img align="center" src="media/logo/browserstack.svg" height="40" width="40"></a>
-<a href="https://appium.io/"><img align="center" src="media/logo/appium.svg" height="40" width="40"></a>
-<a href="https://qameta.io/"><img align="center" src="media/logo/allureTe.svg" height="40" width="40"></a>
+<p align="center">
+<a href="https://www.w3schools.com/java/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/> </a> 
+<a href="https://www.jetbrains.com/idea/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" title="IntelliJ Idea" alt="IntelliJ Idea" width="40" height="40"/> </a> 
+<a href="https://www.android.com/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" title="Android" alt="Android" width="40" height="40"/> </a> 
+<a href="https://developer.android.com/studio"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" title="Android Studio" alt="Android Studio" width="40" height="40"/> </a> 
+<a href="https://git-scm.com/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" title="Git" alt="Git" width="40" height="40"/> </a> 
+<a href="https://junit.org/junit5"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg" title="JUnit5" alt="JUnit5" width="40" height="40"/> </a>
+<a href="https://selenide.org"> <img src="images/logo/selenide.png" title="Selenide" alt="Selenide" width="40" height="40"/> </a>
+<a href="https://www.browserstack.com/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/browserstack/browserstack-original.svg" title="Browserstack" alt="Browserstack" width="40" height="40"/> </a>
+<a href="https://appium.io/"> <img src="images/logo/appium.png" title="Appium" alt="Appium" width="40" height="40"/> </a>
+<a href="https://gradle.org"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" title="Gradle" alt="Gradle" width="40" height="40"/> </a>
+<a href="https://allurereport.org/"> <img src="images/logo/allure_report.png" title="Allure report" alt="Allure report" width="40" height="40"/> </a>
+<a href="https://qameta.io/"> <img src="images/logo/allure_testops.png" title="Allure TestOps" alt="Allure TestOps" width="40" height="40"/> </a>
+<a href="https://www.jenkins.io"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" title="Jenkins" alt="Jenkins" width="40" height="40"/> </a>
 </p>
 
 ---
@@ -62,13 +66,19 @@
 ### Локальный запуск (через эмулятор)
 
 ```bash
-gradle clean test -DdeviceHost=emulation
+gradle clean test -DdeviceHost=emulation 
+-DdeviceName=
+-DplatformVersion=
+-DmobileUrl= 
 ```
 
 ### Локальный запуск (через реальный девайс)
 
 ```bash
 gradle clean test -DdeviceHost=real
+-DdeviceName=
+-DmobileUrl=
+
 ```
 
 > Для запуска локальных тестов требуются следующие установленные программы на компьютере: Appium Server, Appium и Android Studio
@@ -134,3 +144,8 @@ gradle clean test -DdeviceHost=browserstack
 - :heavy_check_mark: Ссылка на Allure отчет
 
 ---
+<a id="gif"></a>
+####  Пример видео запуска теста
+<p align="center">
+  <img src="media/gif/test.gif">
+</p>

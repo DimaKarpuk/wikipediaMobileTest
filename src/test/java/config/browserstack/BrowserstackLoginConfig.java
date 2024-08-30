@@ -5,11 +5,11 @@ import org.aeonbits.owner.Config;
 public interface BrowserstackLoginConfig extends Config {
 
     @Key("userName")
-    @DefaultValue("karpdima_Jf26FY")
+    @DefaultValue("dmitry_6jgG4R")
     String userName();
 
     @Key("accessKey")
-    @DefaultValue("mPKiyHubEAZ4vx2qjgTu")
+    @DefaultValue("qsybaun9iujs1WUWxuoe")
     String accessKey();
 
     @Key("url")
