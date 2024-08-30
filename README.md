@@ -19,7 +19,6 @@
 - Сборщик - <code>Gradle</code>.
 - <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
 - При прогоне тестов для запуска используется [Android Studio](https://developer.android.com/), [Browserstack](https://www.browserstack.com/), драйвер Appium.
-- В отчетах Allure для каждого теста (запускаемого удаленно) прикреплено видео прохождения теста.
 ---
 
 <a id="tools"></a>
