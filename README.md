@@ -27,6 +27,8 @@
 ## 🔨 Технологии и инструменты:
 
 <p align="center">
+<a href="https://qameta.io/"> <img src="media/logo/allureTe.svg" title="Appium" alt="Appium" width="40" height="40"/> </a>
+<a href="https://appium.io/"> <img src="media/logo/appium.svg" title="Appium" alt="Appium" width="40" height="40"/> </a>
 <a href="https://www.w3schools.com/java/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/> </a> 
 <a href="https://www.jetbrains.com/idea/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" title="IntelliJ Idea" alt="IntelliJ Idea" width="40" height="40"/> </a> 
 <a href="https://www.android.com/"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" title="Android" alt="Android" width="40" height="40"/> </a> 
@@ -144,5 +146,5 @@ gradle clean test -DdeviceHost=browserstack
 ####  Пример видео запуска теста
 <p align="center">
   <p align="center">
-<img title="Browserstack Video" src="media/gif/test.gif" width="600" height="600"  alt="video">   
+<img title="Browserstack Video" src="media/gif/test.gif" width="500" height="500"  alt="video">   
 </p>
