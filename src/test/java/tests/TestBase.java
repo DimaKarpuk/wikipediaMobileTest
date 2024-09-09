@@ -40,13 +40,13 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        Attach.pageSource();
-        String deviceHost = System.getProperty("deviceHost");
-        if (deviceHost == "browserstack") {
+        if (System.getProperty("deviceHost", defaultDeviceHost).equals("browserstack")) {
+            Attach.pageSource();
             String sessionId = Selenide.sessionId().toString();
             closeWebDriver();
             Attach.addVideo(sessionId);
         } else {
+            Attach.pageSource();
             closeWebDriver();
         }
     }

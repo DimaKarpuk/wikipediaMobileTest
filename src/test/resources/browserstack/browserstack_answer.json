@@ -6,7 +6,7 @@
     "os_version": "9.0",
     "browser_version": "app",
     "browser": null,
-    "device": "Google Pixel 3",
+    "device": "Google Pixel 3a",
     "status": "done",
     "hashed_id": "0359d759d2aaa4f46401dac46bd281b6d9b24943",
     "reason": "CLIENT_STOPPED_SESSION",
@@ -22,9 +22,9 @@
     "appium_logs_url": "https://api.browserstack.com/app-automate/builds/9a018ff951fd6a4b7cd73cd202f2e5cf3bd74ae9/sessions/0359d759d2aaa4f46401dac46bd281b6d9b24943/appiumlogs",
     "device_logs_url": "https://api.browserstack.com/app-automate/builds/9a018ff951fd6a4b7cd73cd202f2e5cf3bd74ae9/sessions/0359d759d2aaa4f46401dac46bd281b6d9b24943/devicelogs",
     "app_details": {
-      "app_url": "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c",
+      "app_url": "bs://a07a168a96deb78c2ec368985efec5ff4061e279",
       "app_name": "org.wikipedia.alpha",
-      "app_version": "2.5.194-alpha-2017-05-30",
+      "app_version": "2.7.50498-alpha-2024-08-29",
       "app_custom_id": null,
       "uploaded_at": "2019-09-25T10:02:11.000Z"
     },

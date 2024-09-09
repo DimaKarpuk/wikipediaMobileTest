@@ -1,15 +1,15 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.appium.java_client.AppiumBy.accessibilityId;
 import static io.appium.java_client.AppiumBy.id;
-import static org.openqa.selenium.By.xpath;
 
-public class RegistrationScreen {
+public class RegistrationPage {
     private final SelenideElement
             createAnAccount = $x("//android.widget.TextView[@text= 'Create an account']"),
             loginButton = $(id("org.wikipedia.alpha:id/main_drawer_account_container")),
@@ -24,61 +24,74 @@ public class RegistrationScreen {
             crateAccountButton = $(id("org.wikipedia.alpha:id/create_account_submit_button")),
             captchaImage = $(accessibilityId("Captcha image"));
 
-    public RegistrationScreen loginButtonClick() {
+    @Step("Нажимаем кнопку регистрация")
+    public RegistrationPage loginButtonClick() {
         loginButton.click();
         return this;
     }
 
-    public RegistrationScreen userNameButtonClick() {
+    @Step("Нажимаем на поле ввода userName")
+    public RegistrationPage userNameButtonClick() {
         userNameButton.click();
         return this;
     }
 
-    public RegistrationScreen setUserName(String username) {
+    @Step("Вводим userName")
+    public RegistrationPage setUserName(String username) {
         userNameInput.sendKeys(username);
         return this;
     }
 
-    public RegistrationScreen passwordButtonClick() {
+    @Step("Нажимаем на поле ввода password")
+    public RegistrationPage passwordButtonClick() {
         passwordButton.click();
         return this;
     }
 
-    public RegistrationScreen setPassword(String passw) {
+    @Step("Вводим password")
+    public RegistrationPage setPassword(String passw) {
         passwordInput.sendKeys(passw);
         return this;
     }
 
-    public RegistrationScreen repeatPasswordButtonClick() {
+    @Step("Нажимаем на поле ввода повторить password")
+    public RegistrationPage repeatPasswordButtonClick() {
         repeatPasswordButton.click();
         return this;
     }
 
-    public RegistrationScreen setRepeatPassword(String passw) {
+    @Step("Повторно вводим password")
+    public RegistrationPage setRepeatPassword(String passw) {
         repeatPasswordInput.sendKeys(passw);
         return this;
     }
 
-    public RegistrationScreen emailButtonClick() {
+    @Step("Нажимаем на поле ввода email")
+    public RegistrationPage emailButtonClick() {
         emailButton.click();
         return this;
     }
 
-    public RegistrationScreen setEmail(String em) {
+    @Step("Вводим email")
+    public RegistrationPage setEmail(String em) {
         emailInput.sendKeys(em);
         return this;
     }
 
-    public RegistrationScreen createAccountButtonClick() {
+    @Step("Нажимаем кнопку submit")
+    public RegistrationPage createAccountButtonClick() {
         crateAccountButton.click();
         return this;
     }
 
-    public RegistrationScreen checkCreateAccountScreen() {
+    @Step("Проверяем что находимся на странице регистрация")
+    public RegistrationPage checkCreateAccountScreen() {
         createAnAccount.shouldBe(visible);
         return this;
     }
-    public RegistrationScreen checkCaptchaImage(){
+
+    @Step("Проверяем что для продолжения регистрации необходимо пройти каптчу")
+    public RegistrationPage checkCaptchaImage() {
         captchaImage.shouldBe(visible);
         return this;
     }
